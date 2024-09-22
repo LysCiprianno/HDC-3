@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precisamos Conversar...</title>
+    <script>
+        let alunosAprovados = 0;
+ 
+        function calcularMedia() {
+            let continuar = "S";
+            while (continuar.toUpperCase() === "S") {
+                let nota1 = parseFloat(prompt("Informe a primeira nota:"));
+                let nota2 = parseFloat(prompt("Informe a segunda nota:"));
+                
+                let media = (nota1 + nota2) / 2;
+                alert("A média final é: " + media.toFixed(2));
+                
+                if (media >= 9.5) {
+                    alunosAprovados++;
+                    alert("Aluno aprovado!");
+                } else {
+                    alert("Aluno reprovado.");
+                }
+ 
+                continuar = prompt("Calcular a média de outro aluno? (Sim/Não)").toUpperCase();
+            }
+ 
+            alert("Quantidade de alunos aprovados: " + alunosAprovados);
+        }
+    </script>
+</head>
+<body onload="calcularMedia()">
+</body>
+</html>
