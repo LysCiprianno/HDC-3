@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo ou Nada</title>
+    <script>
+        function calcularDivisao() {
+            let valor1 = parseFloat(document.getElementById("valor1").value);
+            let valor2 = parseFloat(document.getElementById("valor2").value);
+            
+            // Verifica se o segundo valor é maior que zero
+            if (valor2 > 0) {
+                let resultado = valor1 / valor2;
+                document.getElementById("resultado").innerText = "Resultado: " + resultado;
+            } else {
+                alert("O segundo valor deve ser maior que zero.");
+            }
+        }
+    </script>
+</head>
+<body>
+ 
+    <h1>Divisão de Valores</h1>
+    <h3>Insira dois valores abaixo: o primeiro normalmente e o segundo deve ser maior que zero. Clique em "Calcular" para ver o resultado da divisão.</h3>
+ 
+    <input type="number" id="valor1" placeholder="Primeiro valor"><br><br>
+    <input type="number" id="valor2" placeholder="Segundo valor (maior que zero)"><br><br>
+    <button onclick="calcularDivisao()">Vamos Calcular!</button>
+ 
+    <p id="resultado"></p>
+ 
+</body>
+</html>
