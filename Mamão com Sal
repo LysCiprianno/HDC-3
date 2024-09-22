@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamão com Sal</title>
+    <script>
+        function imprimirTabuadas() {
+            // Solicita ao usuário que informe o valor de N
+            let N = prompt("Informe um número N:");
+            
+            // Converte a entrada para um número inteiro
+            N = parseInt(N);
+ 
+            // Para cada número de 1 até N, imprime sua tabuada
+            for (let i = 1; i <= N; i++) {
+                document.write("<h3>Tabuada do " + i + "</h3>");
+                
+                // Imprime os valores da tabuada de 1 até 10
+                for (let j = 1; j <= 10; j++) {
+                    document.write(i + " x " + j + " = " + (i * j) + "<br>");
+                }
+ 
+                document.write("<br>"); // Cria uma tabela para as tabuadas
+            }
+        }
+    </script>
+</head>
+<body onload="imprimirTabuadas()">
+</body>
+</html>
