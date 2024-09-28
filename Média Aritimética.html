@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética?!</title>
+    <script>
+        function calcularMedia() {
+            let soma = 0;
+            let quantidade = 0;
+ 
+            for (let i = 15; i <= 100; i++) {
+                soma += i;
+                quantidade++;
+            }
+ 
+            let media = soma / quantidade;
+            document.write("A média aritmética dos números entre 15 e 100 é: " + media);
+        }
+    </script>
+</head>
+<body onload="calcularMedia()">
+</body>
+</html>

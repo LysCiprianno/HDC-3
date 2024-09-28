@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precisamos Conversar 0.1</title>
+    <script>
+        function calcularMedia() {
+            let soma = 0;
+ 
+            for (let i = 1; i <= 6; i++) {
+                let nota;
+                while (true) {
+                    nota = parseFloat(prompt(` A seguir informe as 6 notas do aluno: ${i} (0 a 10):`));
+                    if (nota >= 0 && nota <= 10) break;
+                    alert("Nota inválida! Informe uma nota entre 0 e 10.");
+                }
+                soma += nota;
+            }
+ 
+            alert("A média das notas é: " + (soma / 6).toFixed(2));
+        }
+    </script>
+</head>
+<body onload="calcularMedia()">
+</body>
+</html>
